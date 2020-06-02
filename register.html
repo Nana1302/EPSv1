@@ -190,65 +190,74 @@
     </div>
     <!-- slider Area End-->
 
+    <div style="height:30px;"></div>
+
     <!--================login_part Area =================-->
-    <section class="login_part section_padding ">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6">
-                    <div class="login_part_text text-center">
-                        <div class="login_part_text_iner">
-                            <h2>Already have an account?</h2>
-                            <!-- <p>There are advances being made in technology
-                                everyday, and a good example of this is our EPS! Register an account now to grab all the amazing deals!</p> -->
-                            <a href="login.html" class="btn_3">Sign In</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="login_part_form">
+    <section class="login_part section">
+                <div class="row-col-lg-12 row-col-md-12">
+                    <div class="login_part_form" style="text-align: center;">
                         <div class="login_part_form_iner">
-                            <h3>Welcome to EPS! <br>
+                            <h3 style="margin-left: auto; margin-right: auto;">Welcome to EPS! <br>
                                 Register an account to start shopping now.</h3>
+
                             <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                                 <div class="col-md-12 form-group p_star">
+                                    <div class="image-upload">
+                                    <label for="file">
+                                    <img src="assets/img/hero/image.png" id="output" style="width: 130px; height: 130px; border-radius: 50%;">
+                                    <input id="file" type="file" name="image" accept="image/gif, image/jpeg, image/png" onchange="loadFile(event)" style="display: none;"  /></label>
+                                    </div>
+                                </div>
+
                                 <div class="col-md-12 form-group p_star">
                                     <input type="text" class="form-control" id="name" name="name" value=""
-                                        placeholder="Username">
+                                        placeholder="First Name" style="width: 500px; margin-left: auto; margin-right: auto;">
+                                </div>
+
+                                <div class="col-md-12 form-group p_star">
+                                    <input type="text" class="form-control" id="name" name="name" value=""
+                                        placeholder="Last Name" style="width: 500px; margin-left: auto; margin-right: auto;">
                                 </div>
 
                                 <div class="col-md-12 form-group p_star">
                                     <input type="text" class="form-control" id="email" name="email" value=""
-                                        placeholder="Email address">
+                                        placeholder="Email address" style="width: 500px; margin-left: auto; margin-right: auto;">
                                 </div>
 
                                 <div class="col-md-12 form-group p_star">
                                     <input type="text" class="form-control" id="phone" name="phone" value=""
-                                        placeholder="Phone number">
+                                        placeholder="Phone number" style="width: 500px; margin-left: auto; margin-right: auto;">
                                 </div>
 
                                 <div class="col-md-12 form-group p_star">
                                     <input type="text" class="form-control" id="address" name="phone" value=""
-                                        placeholder="Address">
+                                        placeholder="Address" style="width: 500px; margin-left: auto; margin-right: auto;">
                                 </div>
 
 
                                 <div class="col-md-12 form-group p_star">
                                     <input type="password" class="form-control" id="password" name="password" value=""
-                                        placeholder="Password">
+                                        placeholder="Password" style="width: 500px; margin-left: auto; margin-right: auto;">
                                 </div>
 
                                 <div class="col-md-12 form-group p_star">
                                     <input type="password" class="form-control" id="confirm_password" name="password" value=""
-                                        placeholder="Confirm password">
+                                        placeholder="Confirm password" style="width: 500px; margin-left: auto; margin-right: auto;">
                                 </div>
-                                
+
+                                <div class="col-md-12 form-group p_star">
+                                 <p>Select user type:</p>
+                                    <input type="radio" id="customer" name="user type" value="customer">
+                                    <label for="customer">Customer</label>
+                                    <input type="radio" id="retailer" name="user type" value="retailer">
+                                    <label for="retailer">Retailer</label><br>
+                                </div>
+
                                 <div class="col-md-12 form-group">
-                                    <!-- <div class="creat_account d-flex align-items-center">
-                                        <input type="checkbox" id="f-option" name="selector">
-                                        <label for="f-option">Remember me</label>
-                                    </div> -->
-                                    <button type="submit" value="submit" class="btn_3">
+                                    <button type="submit" value="submit" class="btn_3" style="width: 500px; margin-left: auto; margin-right: auto;">
                                         REGISTER
                                     </button>
+                                     <p style="text-align: center;">Already have an account? <a href="login.html" style="color: #f5f5f5;"><u>Login here</u></a></p>
                             
                                 </div>
                             </form>
@@ -383,6 +392,13 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+
+    <script>
+        var loadFile = function(event) {
+	    var image = document.getElementById('output');
+	    image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
 
     </body>
 </html>
